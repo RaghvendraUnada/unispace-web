@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <div style="display: flex; justify-content: space-between">
+    <img src="unispace.png" alt="Logo 1" style="height: 50px" />
+  </div>
+
+  <div style="text-align: center">
+    <img src="alloa.jpg" alt="Logo 2" style="height: 200px" />
+  </div>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Make the form responsive to the screen size */
+      form {
+        max-width: 500px;
+        margin: auto;
+      }
+      /* Style the input fields */
+      input[type="text"],
+      input[type="tel"] {
+        width: 50%;
+        padding: 12px 20px;
+        text-align: center;
+
+        margin: 50px 140px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+      }
+      /* Style the submit button */
+      .clll {
+        width: 50%;
+        background-color: #648265;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 140px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      /* Style the alert message */
+      .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        display: none; /* Hide the alert message by default */
+      }
+      label {
+        width: 50%;
+        color: #648265;
+        padding: 14px 20px;
+        margin: 8px 175px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Form to collect name and phone number -->
+    <form id="download-form">
+      <label for="name">YOUR NAME:</label><br />
+      <input type="text" id="name" name="name" /><br />
+      <a
+        class="clll"
+        value="Download brochure"
+        href="./INV_BROCHURE.pdf"
+        download="./INV_BROCHURE.pdf"
+        style="text-decoration: none"
+        >Download brochure</a
+      >
+    </form>
+    <!-- Alert message to display if the form is submitted without a name or phone number -->
+    <div class="alert" id="alert-message">Please share your name.</div>
+    <!-- Link to download the brochure -->
+    <a id="download-link" href="" download style="display: none"
+      >Download brochure</a
+    >
+
+    <!-- JavaScript to handle form submission and display the alert message if necessary -->
+    <script>
+      const form = document.getElementById("download-form");
+      const alertMessage = document.getElementById("alert-message");
+      const downloadLink = document.getElementById("download-link");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent the form from submitting
+        console.log("here");
+        <a href="INV_BROCHURE.pdf" download></a>;
+
+        const name = document.getElementById("name").value;
+      });
+    </script>
+  </body>
+</html>
