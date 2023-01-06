@@ -61,24 +61,45 @@
   </head>
   <body>
     <!-- Form to collect name and phone number -->
-    <form id="download-form">
-      <label for="name">YOUR NAME:</label><br />
-      <input type="text" id="name" name="name" /><br />
+    <form
+      id="download-form"
+      style="background-color: transparent; max-width:280px; max-height: 200px;text-align: center;"
+    >
+      <label for="name" style="margin-left: -10px; margin-right: auto"
+        >YOUR NAME</label
+      ><br />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        style="
+          margin-left: auto;
+          margin-right: auto;
+          min-width: 250px;
+          margin-top: 10px;
+        "
+      /><br />
       <a
         class="clll"
         value="Download brochure"
         href="./INV_BROCHURE.pdf"
         download="./INV_BROCHURE.pdf"
-        style="text-decoration: none"
+        style="
+          text-decoration: none;
+          margin-left: auto;
+          margin-right: auto;
+          min-width: 180px;
+          margin-top: -10px;
+          text-align: center;
+        "
         >Download brochure</a
       >
     </form>
     <!-- Alert message to display if the form is submitted without a name or phone number -->
-    <div class="alert" id="alert-message">Please share your name.</div>
-    <!-- Link to download the brochure -->
+    <!-- <div class="alert" id="alert-message">Please share your name.</div>
     <a id="download-link" href="" download style="display: none"
       >Download brochure</a
-    >
+    > -->
 
     <!-- JavaScript to handle form submission and display the alert message if necessary -->
     <script>
