@@ -8,12 +8,12 @@ const demo = async (event) => {
   };
   console.log(data);
 
-  await fetch("https://unispace-web.onrender.com/add/name", {
+  await fetch("http://localhost:3000/add/name", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(data),
+    body: data,
   })
     .then((res) => {
       res.json();
